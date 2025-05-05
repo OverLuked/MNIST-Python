@@ -78,10 +78,10 @@ class Network(object):
     # Helper Functions
 
     # Transform real numbers into a range of (0, 1)
-    def sigmoid(z):
+    def sigmoid(self, z):
         return 1.0/(1.0+np.exp(-z))
     
-    def sigmoid_prime(z):
-        return sigmoid(z)*(1-sigmoid(z))
+    def sigmoid_prime(self, z):
+        return self.sigmoid(z)*(1-self.sigmoid(z))
  
     
